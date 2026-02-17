@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Fisioterapia | FisioVital Madrid</title>
+    <meta name="description" content="Descubre todos nuestros servicios de fisioterapia: deportiva, tratamiento del dolor, rehabilitación postquirúrgica, respiratoria y más en Madrid.">
+    <meta name="keywords" content="servicios fisioterapia, fisioterapia deportiva, tratamiento dolor, rehabilitación postquirúrgica, fisioterapia respiratoria">
+    <link rel="canonical" href="https://baldomeromero16-blip.github.io/fisiovital/servicios.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d7377;
+            --primary-dark: #095456;
+            --secondary: #14ffec;
+            --accent: #323232;
+            --light: #f0fdfa;
+            --white: #ffffff;
+            --text: #1a1a2e;
+            --text-light: #64748b;
+            --shadow: 0 10px 40px rgba(13, 115, 119, 0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; background: var(--light); padding-top: 80px; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: var(--white); box-shadow: var(--shadow); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--primary); }
+        .cta-button { background: var(--primary); color: var(--white); padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; }
+        .cta-button:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 60px 0; text-align: center; color: var(--white); }
+        .page-header h1 { font-size: 3rem; margin-bottom: 15px; }
+        .page-header p { font-size: 1.2rem; opacity: 0.9; }
+        .services-section { padding: 80px 0; }
+        .service-full { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 40px; display: grid; grid-template-columns: 1fr 1fr; }
+        .service-full:nth-child(even) { direction: rtl; }
+        .service-full:nth-child(even) > * { direction: ltr; }
+        .service-image-full { min-height: 380px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .service-content-full { padding: 45px; }
+        .service-content-full h2 { font-size: 1.9rem; color: var(--primary); margin-bottom: 15px; }
+        .service-content-full > p { color: var(--text-light); margin-bottom: 20px; }
+        .service-content-full ul { list-style: none; margin-bottom: 25px; }
+        .service-content-full li { padding: 10px 0; border-bottom: 1px solid #eee; padding-left: 28px; position: relative; }
+        .service-content-full li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        .cta-section { background: var(--primary); padding: 80px 0; text-align: center; color: var(--white); }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-section p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-section .cta-button { background: var(--secondary); color: var(--accent); }
+        footer { background: var(--accent); color: var(--white); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand .logo { color: var(--white); margin-bottom: 20px; display: block; }
+        .footer-brand p { color: rgba(255,255,255,0.7); }
+        .footer-column h4 { color: var(--white); margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 12px; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .service-full { grid-template-columns: 1fr; }
+            .service-full:nth-child(even) { direction: ltr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FisioVital</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html" class="active">Servicios</a></li>
+                    <li><a href="equipo.html">Equipo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="contacto.html" class="cta-button">Reservar Cita</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestros Servicios</h1>
+            <p>Tratamientos especializados para tu recuperación completa</p>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="service-full">
+                <div class="service-image-full" style="background: linear-gradient(135deg, #0d7377, #14ffec);">🏃</div>
+                <div class="service-content-full">
+                    <h2>Fisioterapia Deportiva</h2>
+                    <p>Prevención y recuperación de lesiones para deportistas y personas activas. Optimiza tu rendimiento y vuelve a la práctica deportiva con total garantía.</p>
+                    <ul>
+                        <li>Diagnóstico funcional y biomecánico</li>
+                        <li>Cinesiterapia y entrenamiento propioceptivo</li>
+                        <li>Técnicas de electroterapia y crioterapia</li>
+                        <li>Punción seca y liberación miofascial</li>
+                        <li>Planificación de cargas progresivas</li>
+                    </ul>
+                    <a href="contacto.html" class="cta-button">Solicitar Información</a>
+                </div>
+            </div>
+
+            <div class="service-full">
+                <div class="service-image-full" style="background: linear-gradient(135deg, #14ffec, #0d7377);">💪</div>
+                <div class="service-content-full">
+                    <h2>Tratamiento del Dolor</h2>
+                    <p>Alivio rápido y duradero de dolores crónicos y agudos mediante terapias manual-instrumentales y tecnologías de vanguardia.</p>
+                    <ul>
+                        <li>Neuromodulación eléctrica y TECAR</li>
+                        <li>Terapia manual vertebral y periférica</li>
+                        <li>Ejercicio terapéutico farmacocinético</li>
+                        <li>Aliviación mediante ondas de choque</li>
+                        <li>Estrategias de neuro-reeducación</li>
+                    </ul>
+                    <a href="contacto.html" class="cta-button">Solicitar Información</a>
+                </div>
+            </div>
+
+            <div class="service-full">
+                <div class="service-image-full" style="background: linear-gradient(135deg, #323232, #64748b);">🩺</div>
+                <div class="service-content-full">
+                    <h2>Rehabilitación Postquirúrgica</h2>
+                    <p>Recuperación guiada tras cirugía ortopédica, traumatológica o artroscópica. Recupera movilidad, fuerza y funcionalidad de forma segura.</p>
+                    <ul>
+                        <li>Protocolos personalizados según especialidad</li>
+                        <li>Cicatrización y control de edemas</li>
+                        <li>Ejercicios progresivos asistidos</li>
+                        <li>Movilización precoz de tejidos blandos</li>
+                        <li>Retorno al gesto deportivo y laboral</li>
+                    </ul>
+                    <a href="contacto.html" class="cta-button">Solicitar Información</a>
+                </div>
+            </div>
+
+            <div class="service-full">
+                <div class="service-image-full" style="background: linear-gradient(135deg, #64748b, #0d7377);">🫁</div>
+                <div class="service-content-full">
+                    <h2>Fisioterapia Respiratoria</h2>
+                    <p>Mejora la ventilación pulmonar y elimina secreciones en afecciones respiratorias crónicas o agudas. Recobra calidad de vida con cada respiración.</p>
+                    <ul>
+                        <li>Drenaje postural y percusión mecánica</li>
+                        <li>Ejercicios de entrenamiento diafragmático</li>
+                        <li>Técnicas de dilatación y expansión torácica</li>
+                        <li>Rehabilitación cardiopulmonar estructurada</li>
+                    </ul>
+                    <a href="contacto.html" class="cta-button">Solicitar Información</a>
+                </div>
+            </div>
+
+            <div class="service-full">
+                <div class="service-image-full" style="background: linear-gradient(135deg, #0d7377, #095456);">🎯</div>
+                <div class="service-content-full">
+                    <h2>Readaptación Física</h2>
+                    <p>Programa integral para recuperar forma física tras un periodo de inactividad o enfermedad. Retoma tu rutina sin riesgo de recaída.</p>
+                    <ul>
+                        <li>Evaluación funcional de partida</li>
+                        <li>Entrenamiento de fuerza y resistencia progresivo</li>
+                        <li>Ejercicio en suspensiones y plataformas vibratorias</li>
+                        <li>Control de fatiga y prevención de sobrecargas</li>
+                    </ul>
+                    <a href="contacto.html" class="cta-button">Solicitar Información</a>
+                </div>
+            </div>
+
+            <div class="service-full">
+                <div class="service-image-full" style="background: linear-gradient(135deg, #14ffec, #14ffec);">✨</div>
+                <div class="service-content-full">
+                    <h2>Tratamientos Especializados</h2>
+                    <p>Terapias pioneras para dolencias complejas: suelo pélvico, ATM, acústica neuroménica y osteopatía. Soluciones a medida para casos únicos.</p>
+                    <ul>
+                        <li>Reeducación del suelo pélvico femenino y masculino</li>
+                        <li>Terapia miofuncional ATM y bruxismo</li>
+                        <li>Hidroterapia y crioterapia contrastada</li>
+                        <li>Osteopatía cráneo-sacral y visceral</li>
+                    </ul>
+                    <a href="contacto.html" class="cta-button">Solicitar Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿No Sabes Qué Servicio Necesitas?</h2>
+            <p>Nuestro equipo te orientará sobre el tratamiento más adecuado para tu caso</p>
+            <a href="contacto.html" class="cta-button">Hablar con un Especialista</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">FisioVital</a>
+                    <p>Tu centro de fisioterapia en Madrid.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="servicios.html">Fisioterapia Deportiva</a></li>
+                        <li><a href="servicios.html">Tratamiento del Dolor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📍 C/ Mayor 45, Madrid</li>
+                        <li>📞 +34 910 123 456</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 FisioVital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

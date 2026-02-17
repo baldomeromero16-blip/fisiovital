@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Equipo | FisioVital - Fisioterapeutas en Madrid</title>
+    <meta name="description" content="Conoce a nuestro equipo de fisioterapeutas especializados. Profesionales con años de experiencia en neurología, deportiva y suelo pélvico.">
+    <link rel="canonical" href="https://baldomeromero16-blip.github.io/fisiovital/equipo.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0d7377; --primary-dark: #095456; --secondary: #14ffec; --accent: #323232; --light: #f0fdfa; --white: #ffffff; --text: #1a1a2e; --text-light: #64748b; --shadow: 0 10px 40px rgba(13, 115, 119, 0.15); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; background: var(--light); padding-top: 80px; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: var(--white); box-shadow: var(--shadow); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--primary); }
+        .cta-button { background: var(--primary); color: var(--white); padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; }
+        .cta-button:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 60px 0; text-align: center; color: var(--white); }
+        .page-header h1 { font-size: 3rem; margin-bottom: 15px; }
+        .page-header p { font-size: 1.2rem; opacity: 0.9; }
+        .intro-section { padding: 80px 0; text-align: center; background: var(--white); }
+        .intro-section h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .intro-section p { max-width: 700px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 0 0 80px; }
+        .team-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s; }
+        .team-card:hover { transform: translateY(-10px); }
+        .team-photo { height: 280px; display: flex; align-items: center; justify-content: center; font-size: 7rem; position: relative; }
+        .team-photo::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(transparent, rgba(255,255,255,0.9)); }
+        .team-content { padding: 30px; text-align: center; }
+        .team-content h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 5px; }
+        .team-content .specialty { color: var(--secondary); font-weight: 600; margin-bottom: 15px; background: var(--accent); padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.85rem; }
+        .team-content > p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.8; }
+        .team-stats { display: flex; justify-content: center; gap: 35px; padding-top: 20px; border-top: 1px solid #eee; }
+        .stat { text-align: center; }
+        .stat strong { display: block; color: var(--primary); font-size: 1.6rem; }
+        .stat span { font-size: 0.85rem; color: var(--text-light); }
+        .certifications { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 15px; }
+        .cert { background: var(--light); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; color: var(--text-light); border: 1px solid #e2e8f0; }
+        .values-section { background: var(--white); padding: 80px 0; }
+        .values-section h2 { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .value-item { text-align: center; padding: 30px; }
+        .value-icon { font-size: 3rem; margin-bottom: 20px; }
+        .value-item h3 { color: var(--text); margin-bottom: 15px; }
+        .value-item p { color: var(--text-light); }
+        .cta-section { background: var(--primary); padding: 80px 0; text-align: center; color: var(--white); }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-section p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-section .cta-button { background: var(--secondary); color: var(--accent); }
+        footer { background: var(--accent); color: var(--white); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand .logo { color: var(--white); margin-bottom: 20px; display: block; }
+        .footer-brand p { color: rgba(255,255,255,0.7); }
+        .footer-column h4 { color: var(--white); margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 12px; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        @media (max-width: 768px) { .nav-container { flex-direction: column; gap: 15px; } .values-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FisioVital</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="equipo.html" class="active">Equipo</a></li>
+                    <li><a href="contact</a></lio.html">Contacto>
+                </ul>
+            </nav>
+            <a href="contacto.html" class="cta-button">Reservar Cita</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestro Equipo</h1>
+            <p>Profesionales que transforman vidas a través de la movilidad</p>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="container">
+            <h2>Expertos en Tu Recuperación</h2>
+            <p>Nuestro equipo está formado por fisioterapeutas titulados, colegiados y con amplia experiencia en diferentes especialidades. Cada personalizada y cercana.</p>
+         paciente recibe una atención</div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo" style="background: linear-gradient(135deg, #0d7377 0%, #14ffec 100%);">👩‍⚕️</div>
+                    <div class="team-content">
+                        <h3>Dra. Laura Martínez García</h3>
+                        <div class="specialty">Fisioterapia Neurológica</div>
+                        <p>Abordo cada caso neurológico con un enfoque integral que combina la evidencia científica más actualizada con técnicas manual-terapéuticas personalizadas, buscando maximizar la neuroplasticidad y mejorar la calidad de vida.</p>
+                        <div class="certifications">
+                            <span class="cert">Máster Neurorehabilitación</span>
+                            <span class="cert">Certificación Bobath</span>
+                            <span class="cert">Experta Parkinson</span>
+                        </div>
+                        <div class="team-stats">
+                            <div class="stat"><strong>12</strong><span>Años exp.</span></div>
+                            <div class="stat"><strong>2.800+</strong><span>Pacientes</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo" style="background: linear-gradient(135deg, #14ffec 0%, #0d7377 100%);">👨‍⚕️</div>
+                    <div class="team-content">
+                        <h3>Fernando Rodríguez Delgado</h3>
+                        <div class="specialty">Fisioterapia Deportiva</div>
+                        <p>Mi filosofía se centra en el 'return to play' seguro y óptimo, utilizando análisis biomecánico avanzado y ejercicio terapéutico progresivo para que deportistas amateur y profesionales recuperen su máximo rendimiento.</p>
+                        <div class="certifications">
+                            <span class="cert">Readaptación RFEF</span>
+                            <span class="cert">Método Barça</span>
+                            <span class="cert">Biomecánica FIFA</span>
+                        </div>
+                        <div class="team-stats">
+                            <div class="stat"><strong>9</strong><span>Años exp.</span></div>
+                            <div class="stat"><strong>3.500+</strong><span>Pacientes</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo" style="background: linear-gradient(135deg, #323232 0%, #64748b 100%);">👩‍⚕️</div>
+                    <div class="team-content">
+                        <h3>Carla Sánchez López</h3>
+                        <div class="specialty">Fisioterapia Pélvica y Postparto</div>
+                        <p>Creo espacios seguros y empáticos donde las mujeres puedan hablar abiertamente de sus problemas, aplicando técnicas específicas para recuperar la función pélvica y devolver el control corporal.</p>
+                        <div class="certifications">
+                            <span class="cert">Grado Fisioterapia</span>
+                            <span class="cert">Experta Suelo Pélvico</span>
+                            <span class="cert">Hipopresivos</span>
+                        </div>
+                        <div class="team-stats">
+                            <div class="stat"><strong>7</strong><span>Años exp.</span></div>
+                            <div class="stat"><strong>1.900+</strong><span>Pacientes</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2>Nuestros Valores</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">🎯</div>
+                    <h3>Profesionalidad</h3>
+                    <p>Formación continua y actualización constante en las últimas técnicas</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">💝</div>
+                    <h3>Empatía</h3>
+                    <p>Entendemos tu situación y te acompañamos en todo el proceso</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h3>Compromiso</h3>
+                    <p>Tu recuperación es nuestra prioridad absoluta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Quieres Conocernos?</h2>
+            <p>Agenda tu primera consulta y descubre por qué nuestros pacientes confían en nosotros</p>
+            <a href="contacto.html" class="cta-button">Reservar Cita Gratis</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">FisioVital</a>
+                    <p>Tu centro de fisioterapia en Madrid.</p>
+                </div>
+                <div class="footer-column"><h4>Servicios</h4><ul><li><a href="servicios.html">Deportiva</a></li><li><a href="servicios.html">Dolor</a></li></ul></div>
+                <div class="footer-column"><h4>Empresa</h4><ul><li><a href="equipo.html">Equipo</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+                <div class="footer-column"><h4>Contacto</h4><ul><li>📍 C/ Mayor 45</li><li>📞 +34 910 123 456</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 FisioVital. Todos los derechos reservados.</p></div>
+        </div>
+    </footer>
+</body>
+</html>

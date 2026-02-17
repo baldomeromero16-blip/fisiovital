@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisioterapia Avanzada | Recuperación Rápida - FisioVital</title>
+    <meta name="description" content="Recupera tu bienestar con fisioterapia personalizada en Madrid. Terapias manuales y tecnología de vanguardia. ¡Pide cita ya!">
+    <meta name="keywords" content="fisioterapia, fisioterapeuta, tratamiento dolor, rehabilitación, lesiones deportivas, dolor espalda, consulta fisioterapia">
+    <meta property="og:title" content="Fisioterapia Avanzada | FisioVital">
+    <meta property="og:description" content="Recupera tu bienestar con fisioterapia personalizada">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://baldomeromero16-blip.github.io/fisiovital/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d7377;
+            --primary-dark: #095456;
+            --secondary: #14ffec;
+            --accent: #323232;
+            --light: #f0fdfa;
+            --white: #ffffff;
+            --text: #1a1a2e;
+            --text-light: #64748b;
+            --shadow: 0 10px 40px rgba(13, 115, 119, 0.15);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--light);
+        }
+        
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover, nav a.active { color: var(--primary); }
+        
+        .cta-button {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(13, 115, 119, 0.4);
+        }
+        
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(13, 115, 119, 0.95), rgba(9, 84, 86, 0.9)), 
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920') center/cover;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content { max-width: 750px; }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.15;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.92);
+            margin-bottom: 35px;
+        }
+        
+        .hero .cta-button {
+            background: var(--secondary);
+            color: var(--accent);
+            font-size: 1.1rem;
+            padding: 15px 35px;
+        }
+        
+        .section { padding: 100px 0; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features { background: var(--white); }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--light);
+            border-radius: 20px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        
+        .feature-card p { color: var(--text-light); }
+        
+        .services-preview { background: var(--light); }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover { transform: translateY(-5px); }
+        
+        .service-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .service-content { padding: 30px; }
+        
+        .service-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .service-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .service-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .testimonials {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+        }
+        
+        .testimonials h2 { color: var(--white); }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            color: var(--white);
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-avatar {
+            width: 55px;
+            height: 55px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-info strong { display: block; color: var(--white); font-size: 1.05rem; }
+        .testimonial-info span { font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+        
+        .trust { background: var(--white); padding: 70px 0; }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .trust-item h3 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .trust-item p {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        
+        footer {
+            background: var(--accent);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .footer-brand p { color: rgba(255,255,255,0.7); }
+        
+        .footer-column h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 12px; }
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover { color: var(--secondary); }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-container { flex-direction: column; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FisioVital</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="equipo.html">Equipo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="contacto.html" class="cta-button">Reservar Cita</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Recupera tu movimiento y calidad de vida</h1>
+                <p>En FisioVital llevamos más de 15 años devolviendo sonrisas a través del movimiento. Nuestro equipo de fisioterapeutas colegiados combina la terapia manual tradicional con la tecnología más avanzada para ofrecerte un diagnóstico certero y un plan 100% personalizado.</p>
+                <a href="contacto.html" class="cta-button">Pedir Cita Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section features">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por Qué Elegir FisioVital?</h2>
+                <p>Nuestra filosofía se basa en tres pilares fundamentales que garantizan tu recuperación</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Tratamiento Personalizado</h3>
+                    <p>Creemos que cada cuerpo es único. Por eso realizamos una evaluación exhaustiva y diseñamos un plan adaptado a tus objetivos, tiempo y estilo de vida.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Avances Tecnológicos</h3>
+                    <p>Incorporamos ondas de choque, radiofrecuencia inductiva y laserterapia de última generación para reducir hasta un 40% los tiempos de recuperación.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💚</div>
+                    <h3>Continuidad de Cuidados</h3>
+                    <p>Te acompañamos más allá de la consulta: ejercicios guiados vía app, seguimiento mensual gratuito durante 6 meses y acceso ilimitado a webinars de salud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios Destacados</h2>
+                <p>Tratamientos especializados para cada necesidad</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #0d7377, #14ffec);">🏃</div>
+                    <div class="service-content">
+                        <h3>Fisioterapia Deportiva</h3>
+                        <p>Especialistas en lesiones de ligamentos, tendinopatías y readaptación deportiva. Tasa de éxito del 92% en regreso a competición.</p>
+                        <a href="servicios.html" class="service-link">Ver más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #14ffec, #0d7377);">💪</div>
+                    <div class="service-content">
+                        <h3>Neuromodulación y Dolor Crónico</h3>
+                        <p>Protocolo combinado de dry-needling, neurodinamia y ejercicio terapéutico para reducir dolor lumbar y cervical persistente.</p>
+                        <a href="servicios.html" class="service-link">Ver más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #323232, #64748b);">🤰</div>
+                    <div class="service-content">
+                        <h3>Fisioterapia Pre y Post Parto</h3>
+                        <p>Recupera la musculatura del suelo pélvico, alivia dolores lumbares y reeduca posturas mediante ejercicios hipopresivos y técnica Pilates.</p>
+                        <a href="servicios.html" class="service-link">Ver más →</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 45px;">
+                <a href="servicios.html" class="cta-button">Ver Todos los Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo Que Dicen Nuestros Pacientes</h2>
+                <p>Más de 7.500 pacientes recuperados nos respaldan</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Después de una rotura de cruzados pensé que no volvería a correr. En FisioVital me devolvieron la confianza y estoy listo para mi primer maratón en 5 meses."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MG</div>
+                        <div class="testimonial-info">
+                            <strong>Marta González</strong>
+                            <span>Atleta amateur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Llevaba 8 años con dolor lumbar que me impedía dormir. Gracias al plan de neuromodulación y los ejercicios en casa puedo decir que vuelvo a dormir 8 horas seguidas."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CM</div>
+                        <div class="testimonial-info">
+                            <strong>Carlos Méndez</strong>
+                            <span>47 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <h3>15+</h3>
+                    <p>Años de Experiencia</p>
+                </div>
+                <div class="trust-item">
+                    <h3>7.500+</h3>
+                    <p>Pacientes Atendidos</p>
+                </div>
+                <div class="trust-item">
+                    <h3>92%</h3>
+                    <p>Tasa de Éxito</p>
+                </div>
+                <div class="trust-item">
+                    <h3>6</h3>
+                    <p>Especialistas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">FisioVital</a>
+                    <p>Tu centro de fisioterapia en Madrid. Combinamos tecnología avanzada con trato humano para tu recuperación.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="servicios.html">Fisioterapia Deportiva</a></li>
+                        <li><a href="servicios.html">Tratamiento del Dolor</a></li>
+                        <li><a href="servicios.html">Rehabilitación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="equipo.html">Nuestro Equipo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📍 C/ Mayor 45, Madrid</li>
+                        <li>📞 +34 910 123 456</li>
+                        <li>✉️ hola@fisiovital.es</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 FisioVital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

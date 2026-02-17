@@ -11,17 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0d7377;
-            --primary-dark: #095456;
-            --secondary: #14ffec;
-            --accent: #323232;
-            --light: #f0fdfa;
-            --white: #ffffff;
-            --text: #1a1a2e;
-            --text-light: #64748b;
-            --shadow: 0 10px 40px rgba(13, 115, 119, 0.15);
-        }
+        :root { --primary: #0d7377; --primary-dark: #095456; --secondary: #14ffec; --accent: #323232; --light: #f0fdfa; --white: #ffffff; --text: #1a1a2e; --text-light: #64748b; --shadow: 0 10px 40px rgba(13, 115, 119, 0.15); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; background: var(--light); padding-top: 80px; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
@@ -41,7 +31,7 @@
         .service-full { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 40px; display: grid; grid-template-columns: 1fr 1fr; }
         .service-full:nth-child(even) { direction: rtl; }
         .service-full:nth-child(even) > * { direction: ltr; }
-        .service-image-full { min-height: 380px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .service-image-full { width: 100%; min-height: 380px; object-fit: cover; }
         .service-content-full { padding: 45px; }
         .service-content-full h2 { font-size: 1.9rem; color: var(--primary); margin-bottom: 15px; }
         .service-content-full > p { color: var(--text-light); margin-bottom: 20px; }
@@ -61,13 +51,7 @@
         .footer-column li { margin-bottom: 12px; }
         .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; }
         .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.9rem; }
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 15px; }
-            .service-full { grid-template-columns: 1fr; }
-            .service-full:nth-child(even) { direction: ltr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 2rem; }
-        }
+        @media (max-width: 768px) { .nav-container { flex-direction: column; gap: 15px; } .service-full { grid-template-columns: 1fr; } .service-full:nth-child(even) { direction: ltr; } .footer-grid { grid-template-columns: 1fr; } .page-header h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -96,7 +80,7 @@
     <section class="services-section">
         <div class="container">
             <div class="service-full">
-                <div class="service-image-full" style="background: linear-gradient(135deg, #0d7377, #14ffec);">🏃</div>
+                <img src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=800&h=600&fit=crop&q=80" alt="Fisioterapia deportiva" class="service-image-full">
                 <div class="service-content-full">
                     <h2>Fisioterapia Deportiva</h2>
                     <p>Prevención y recuperación de lesiones para deportistas y personas activas. Optimiza tu rendimiento y vuelve a la práctica deportiva con total garantía.</p>
@@ -112,7 +96,7 @@
             </div>
 
             <div class="service-full">
-                <div class="service-image-full" style="background: linear-gradient(135deg, #14ffec, #0d7377);">💪</div>
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&h=600&fit=crop&q=80" alt="Tratamiento del dolor" class="service-image-full">
                 <div class="service-content-full">
                     <h2>Tratamiento del Dolor</h2>
                     <p>Alivio rápido y duradero de dolores crónicos y agudos mediante terapias manual-instrumentales y tecnologías de vanguardia.</p>
@@ -128,7 +112,7 @@
             </div>
 
             <div class="service-full">
-                <div class="service-image-full" style="background: linear-gradient(135deg, #323232, #64748b);">🩺</div>
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&q=80" alt="Rehabilitación postquirúrgica" class="service-image-full">
                 <div class="service-content-full">
                     <h2>Rehabilitación Postquirúrgica</h2>
                     <p>Recuperación guiada tras cirugía ortopédica, traumatológica o artroscópica. Recupera movilidad, fuerza y funcionalidad de forma segura.</p>
@@ -144,7 +128,7 @@
             </div>
 
             <div class="service-full">
-                <div class="service-image-full" style="background: linear-gradient(135deg, #64748b, #0d7377);">🫁</div>
+                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop&q=80" alt="Fisioterapia respiratoria" class="service-image-full">
                 <div class="service-content-full">
                     <h2>Fisioterapia Respiratoria</h2>
                     <p>Mejora la ventilación pulmonar y elimina secreciones en afecciones respiratorias crónicas o agudas. Recobra calidad de vida con cada respiración.</p>
@@ -159,7 +143,7 @@
             </div>
 
             <div class="service-full">
-                <div class="service-image-full" style="background: linear-gradient(135deg, #0d7377, #095456);">🎯</div>
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&q=80" alt="Readaptación física" class="service-image-full">
                 <div class="service-content-full">
                     <h2>Readaptación Física</h2>
                     <p>Programa integral para recuperar forma física tras un periodo de inactividad o enfermedad. Retoma tu rutina sin riesgo de recaída.</p>
@@ -174,7 +158,7 @@
             </div>
 
             <div class="service-full">
-                <div class="service-image-full" style="background: linear-gradient(135deg, #14ffec, #14ffec);">✨</div>
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop&q=80" alt="Tratamientos especializados" class="service-image-full">
                 <div class="service-content-full">
                     <h2>Tratamientos Especializados</h2>
                     <p>Terapias pioneras para dolencias complejas: suelo pélvico, ATM, acústica neuroménica y osteopatía. Soluciones a medida para casos únicos.</p>

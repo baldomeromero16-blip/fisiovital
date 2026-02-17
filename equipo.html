@@ -32,11 +32,10 @@
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 0 0 80px; }
         .team-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s; }
         .team-card:hover { transform: translateY(-10px); }
-        .team-photo { height: 280px; display: flex; align-items: center; justify-content: center; font-size: 7rem; position: relative; }
-        .team-photo::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(transparent, rgba(255,255,255,0.9)); }
+        .team-photo { width: 100%; height: 300px; object-fit: cover; }
         .team-content { padding: 30px; text-align: center; }
         .team-content h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 5px; }
-        .team-content .specialty { color: var(--secondary); font-weight: 600; margin-bottom: 15px; background: var(--accent); padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.85rem; }
+        .team-content .specialty { color: var(--white); font-weight: 600; margin-bottom: 15px; background: var(--primary); padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.85rem; }
         .team-content > p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.8; }
         .team-stats { display: flex; justify-content: center; gap: 35px; padding-top: 20px; border-top: 1px solid #eee; }
         .stat { text-align: center; }
@@ -48,7 +47,7 @@
         .values-section h2 { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; }
         .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
         .value-item { text-align: center; padding: 30px; }
-        .value-icon { font-size: 3rem; margin-bottom: 20px; }
+        .value-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; }
         .value-item h3 { color: var(--text); margin-bottom: 15px; }
         .value-item p { color: var(--text-light); }
         .cta-section { background: var(--primary); padding: 80px 0; text-align: center; color: var(--white); }
@@ -76,7 +75,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="equipo.html" class="active">Equipo</a></li>
-                    <li><a href="contact</a></lio.html">Contacto>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
             <a href="contacto.html" class="cta-button">Reservar Cita</a>
@@ -93,15 +92,15 @@
     <section class="intro-section">
         <div class="container">
             <h2>Expertos en Tu Recuperación</h2>
-            <p>Nuestro equipo está formado por fisioterapeutas titulados, colegiados y con amplia experiencia en diferentes especialidades. Cada personalizada y cercana.</p>
-         paciente recibe una atención</div>
+            <p>Nuestro equipo está formado por fisioterapeutas titulados, colegiados y con amplia experiencia en diferentes especialidades. Cada paciente recibe una atención personalizada y cercana.</p>
+        </div>
     </section>
 
     <section>
         <div class="container">
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="team-photo" style="background: linear-gradient(135deg, #0d7377 0%, #14ffec 100%);">👩‍⚕️</div>
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=600&fit=crop&q=80" alt="Dra. Laura Martínez García" class="team-photo">
                     <div class="team-content">
                         <h3>Dra. Laura Martínez García</h3>
                         <div class="specialty">Fisioterapia Neurológica</div>
@@ -119,7 +118,7 @@
                 </div>
 
                 <div class="team-card">
-                    <div class="team-photo" style="background: linear-gradient(135deg, #14ffec 0%, #0d7377 100%);">👨‍⚕️</div>
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=600&fit=crop&q=80" alt="Fernando Rodríguez Delgado" class="team-photo">
                     <div class="team-content">
                         <h3>Fernando Rodríguez Delgado</h3>
                         <div class="specialty">Fisioterapia Deportiva</div>
@@ -137,7 +136,7 @@
                 </div>
 
                 <div class="team-card">
-                    <div class="team-photo" style="background: linear-gradient(135deg, #323232 0%, #64748b 100%);">👩‍⚕️</div>
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=600&fit=crop&q=80" alt="Carla Sánchez López" class="team-photo">
                     <div class="team-content">
                         <h3>Carla Sánchez López</h3>
                         <div class="specialty">Fisioterapia Pélvica y Postparto</div>
@@ -162,17 +161,17 @@
             <h2>Nuestros Valores</h2>
             <div class="values-grid">
                 <div class="value-item">
-                    <div class="value-icon">🎯</div>
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&q=80" alt="Profesionalidad" class="value-img">
                     <h3>Profesionalidad</h3>
                     <p>Formación continua y actualización constante en las últimas técnicas</p>
                 </div>
                 <div class="value-item">
-                    <div class="value-icon">💝</div>
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=200&h=200&fit=crop&q=80" alt="Empatía" class="value-img">
                     <h3>Empatía</h3>
                     <p>Entendemos tu situación y te acompañamos en todo el proceso</p>
                 </div>
                 <div class="value-item">
-                    <div class="value-icon">🤝</div>
+                    <img src="https://images.unsplash.com/photo-1609899464726-209befb4e8ac?w=200&h=200&fit=crop&q=80" alt="Compromiso" class="value-img">
                     <h3>Compromiso</h3>
                     <p>Tu recuperación es nuestra prioridad absoluta</p>
                 </div>

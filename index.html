@@ -99,8 +99,8 @@
         
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, rgba(13, 115, 119, 0.95), rgba(9, 84, 86, 0.9)), 
-                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920') center/cover;
+            background: linear-gradient(135deg, rgba(13, 115, 119, 0.92), rgba(9, 84, 86, 0.88)), 
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80') center/cover;
             display: flex;
             align-items: center;
             padding-top: 80px;
@@ -171,16 +171,12 @@
             box-shadow: var(--shadow);
         }
         
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
+        .feature-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
         }
         
         .feature-card h3 {
@@ -210,11 +206,9 @@
         .service-card:hover { transform: translateY(-5px); }
         
         .service-image {
+            width: 100%;
             height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
+            object-fit: cover;
         }
         
         .service-content { padding: 30px; }
@@ -276,14 +270,9 @@
         .testimonial-avatar {
             width: 55px;
             height: 55px;
-            background: var(--secondary);
+            background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80') center/cover;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--accent);
-            font-size: 1.2rem;
+            border: 2px solid var(--secondary);
         }
         
         .testimonial-info strong { display: block; color: var(--white); font-size: 1.05rem; }
@@ -397,17 +386,17 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
+                    <img src="https://images.unsplash.com/photo-1609899464726-209befb4e8ac?w=600&h=400&fit=crop&q=80" alt="Tratamiento personalizado" class="feature-img">
                     <h3>Tratamiento Personalizado</h3>
                     <p>Creemos que cada cuerpo es único. Por eso realizamos una evaluación exhaustiva y diseñamos un plan adaptado a tus objetivos, tiempo y estilo de vida.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop&q=80" alt="Avances tecnológicos" class="feature-img">
                     <h3>Avances Tecnológicos</h3>
                     <p>Incorporamos ondas de choque, radiofrecuencia inductiva y laserterapia de última generación para reducir hasta un 40% los tiempos de recuperación.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💚</div>
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80" alt="Continuidad de cuidados" class="feature-img">
                     <h3>Continuidad de Cuidados</h3>
                     <p>Te acompañamos más allá de la consulta: ejercicios guiados vía app, seguimiento mensual gratuito durante 6 meses y acceso ilimitado a webinars de salud.</p>
                 </div>
@@ -423,7 +412,7 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-image" style="background: linear-gradient(135deg, #0d7377, #14ffec);">🏃</div>
+                    <img src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=600&h=400&fit=crop&q=80" alt="Fisioterapia deportiva" class="service-image">
                     <div class="service-content">
                         <h3>Fisioterapia Deportiva</h3>
                         <p>Especialistas en lesiones de ligamentos, tendinopatías y readaptación deportiva. Tasa de éxito del 92% en regreso a competición.</p>
@@ -431,7 +420,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-image" style="background: linear-gradient(135deg, #14ffec, #0d7377);">💪</div>
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop&q=80" alt="Tratamiento del dolor" class="service-image">
                     <div class="service-content">
                         <h3>Neuromodulación y Dolor Crónico</h3>
                         <p>Protocolo combinado de dry-needling, neurodinamia y ejercicio terapéutico para reducir dolor lumbar y cervical persistente.</p>
@@ -439,7 +428,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-image" style="background: linear-gradient(135deg, #323232, #64748b);">🤰</div>
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop&q=80" alt="Fisioterapia pre y post parto" class="service-image">
                     <div class="service-content">
                         <h3>Fisioterapia Pre y Post Parto</h3>
                         <p>Recupera la musculatura del suelo pélvico, alivia dolores lumbares y reeduca posturas mediante ejercicios hipopresivos y técnica Pilates.</p>
@@ -463,7 +452,7 @@
                 <div class="testimonial-card">
                     <p>"Después de una rotura de cruzados pensé que no volvería a correr. En FisioVital me devolvieron la confianza y estoy listo para mi primer maratón en 5 meses."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">MG</div>
+                        <div class="testimonial-avatar" style="background: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&q=80') center/cover;"></div>
                         <div class="testimonial-info">
                             <strong>Marta González</strong>
                             <span>Atleta amateur</span>
@@ -473,7 +462,7 @@
                 <div class="testimonial-card">
                     <p>"Llevaba 8 años con dolor lumbar que me impedía dormir. Gracias al plan de neuromodulación y los ejercicios en casa puedo decir que vuelvo a dormir 8 horas seguidas."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">CM</div>
+                        <div class="testimonial-avatar" style="background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80') center/cover;"></div>
                         <div class="testimonial-info">
                             <strong>Carlos Méndez</strong>
                             <span>47 años</span>
